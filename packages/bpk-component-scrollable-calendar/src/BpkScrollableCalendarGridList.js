@@ -23,7 +23,7 @@ import { cssModules } from 'bpk-react-utils';
 import { DateUtils, BpkCalendarGridPropTypes } from 'bpk-component-calendar';
 import { startOfDay, startOfMonth } from 'date-fns';
 
-import STYLES from './bpk-scrollable-calendar-grid-list.scss';
+import STYLES from './bpk-scrollable-calendar-grid-list.css';
 import BpkScrollableCalendarGrid from './BpkScrollableCalendarGrid';
 
 const getClassName = cssModules(STYLES);

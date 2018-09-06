@@ -23,7 +23,7 @@ import { cssModules } from 'bpk-react-utils';
 
 import sassdocLogoSvg from '../../static/sassdoc-logo.svg';
 
-import STYLES from './SassdocLink.scss';
+import STYLES from './SassdocLink.css';
 
 const getClassName = cssModules(STYLES);
 

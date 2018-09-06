@@ -51,7 +51,8 @@
     "publish": "npm run check-owners && npm run build && git pull --rebase && npm run flow stop && npm run test && lerna publish",
     "danger": "danger ci",
     "prettier": "prettier --config .prettierrc --write \"**/*.js\"",
-    "create-component": "node scripts/npm/create-component.js"
+    "create-component": "node scripts/npm/create-component.js",
+    "sass": "node-sass packages --output packages --importer=node_modules/node-sass-tilde-importer --functions=packages/bpk-mixins/sass-functions --output-style=compressed"
   },
   "lint-staged": {
     "*.js": [
@@ -120,6 +121,7 @@
     "marked": "^0.5.0",
     "merge-stream": "^1.0.1",
     "node-sass": "^4.9.3",
+    "node-sass-tilde-importer": "^1.0.2",
     "postcss-flexbugs-fixes": "^4.1.0",
     "postcss-loader": "^3.0.0",
     "prompt": "^1.0.0",
@@ -162,7 +164,7 @@
     ],
     "moduleNameMapper": {
       "react-transition-group/CSSTransition": "<rootDir>/scripts/stubs/cssTransitionStub.js",
-      "^.+\\.scss$": "<rootDir>/scripts/stubs/styleStub.js",
+      "^.+\\.s?css$": "<rootDir>/scripts/stubs/styleStub.js",
       "^.+\\.svg$": "<rootDir>/scripts/stubs/fileStub.js"
     },
     "coverageThreshold": {
